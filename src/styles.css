@@ -44,6 +44,9 @@ main {
   padding: 30px 0;
 }
 
+.weather-app-details strong {
+  color: #b40000;
+}
 .weather-app-data {
   display: flex;
   justify-content: space-between;
