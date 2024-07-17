@@ -9,8 +9,6 @@ function refreshWeather(response) {
   let date = new Date(response.data.time * 1000);
   let iconElement = document.querySelector("#icon");
 
-  // (response.data.condition.description)
-
   cityElement.innerHTML = response.data.city;
   timeElement.innerHTML = formatDate(date);
   descriptionElement.innerHTML = response.data.condition.description;
@@ -43,7 +41,6 @@ function formatDate(date) {
 }
 
 function searchCity(city) {
-  //make API call and update the interface
   let apiKey = "5b0313etca1e9cc9o45e4a08de8f9c3c";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(refreshWeather);
